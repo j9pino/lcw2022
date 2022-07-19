@@ -1,0 +1,186 @@
+    1  pwd
+    2  ls
+    3  ls -l
+    4  ls -lh
+    5  cd Desktop
+    6  cd Desktop
+    7  cd desktop
+    8  cd Desktop
+    9  cd
+   10  cd Desktop
+   11  cd
+   12  cd Desktop
+   13  cd
+   14  cd
+   15  cd Desktop
+   16  cd lcw2022
+   17  cd
+   18  cd Desktop
+   19  cd Desktop/lcw2022
+   20  cd OneDrive
+   21  cd OneDrive/Desktop
+   22  cd
+   23  cd
+   24  cd
+   25  cd Desktop
+   26  cd
+   27  cd Desktop
+   28  cd
+   29  cd Desktop
+   30  cd Desktop/lcw2022
+   31  cd lcw2022
+   32  lcw2022/shell-lesson
+   33  pwd
+   34  lcw2022/shell-lesson
+   35  cd lcw2022/shell-lesson
+   36  cd
+   37  pwd
+   38  cd Desktop
+   39  cd lcw2022
+   40  cd lcw2022/shell-lesson
+   41  cd shell-lesson
+   42  pwd
+   43  mkdir firstdir
+   44  ls
+   45  cd firstdir
+   46  cd ..
+   47  ls
+   48  cd ..
+   49  ls
+   50  cd shell-lesson
+   51  ls
+   52  ls -lh
+   53  cat 829-0.txt
+   54   head 829-0.txt
+   55  tail 829-0.txt
+   56  head --help
+   57  less 829-0.txt
+   58  head 829-0.txt 33504-0.txt
+   59  head *.txt
+   60  mv 829-0.txt gulliver.txt
+   61  ls
+   62  cp gulliver.txt gulliver-backup.txt
+   63  ls
+   64  mv firstdir backup
+   65  ls
+   66  mv gulliver-backup.txt backup
+   67  ls
+   68  ls backup
+   69  history
+   70  pwd
+   71  history > history.txt
+   72  ls
+   73  head history.txt
+   74  echo "Library Carpentry is awesome!"
+   75  NAME ="Janine"
+   76  echo "$NAME is a fantastic library carpentry student."
+   77  name ="Janine"
+   78  $ NAME="Janine"
+   79  NAME="Pino"
+   80  echo "$NAME is awesome!"
+   81  echo "Today it is" $(date)
+   82  pwd
+   83  ls
+   84  touch a.txt b.txt c.txt d.txt
+   85  ls
+   86  for filename in ?.txt; do echo "$filename"; cp "$filename" backup_"$filename"; done
+   87  ls
+   88  for file in *.text; do echo "$file"; head -n 1 "$file"; tail -n 10 "$file"; done
+   89  for file in *.text; do echo "$file"; head -n 1 "$file"; tail -n 10 "$file"; done
+   90  for file in *.txt; do echo "$file"; head -n 1 "$file"; tail -n 10 "$file"; done
+   91  for file in *.txt; do echo "?file"; head -n 1 *.text; done
+   92  for file in *.txt; do echo "?file"; head -n 1 *.txt; tail -n 10 *.txt; done
+   93  for file in *.txt; do echo "$file"; head -n 1 "$file"; tail -n 1 "$file"; done
+   94  pwd
+   95  ls -lhS
+   96  head -n 4 2014-01_JA.tsv
+   97  wc *.tsv
+   98  wc -l *.tsv
+   99  wc -l *.tsv > lengths.txt
+  100  cat lengths.txt
+  101  sort -n lengths.text > sorted-lengths.txt
+  102  sort -n lengths.txt > sorted-lengths.txt
+  103  cat sorted-lengths.txt
+  104  wc -l *.tsv | sort -n | head -n 1
+  105  wc -w *.tsv | sort -n | tail -n 11
+  106  ls
+  107  ls | wc -f
+  108  wc --help
+  109  ls | wc -files
+  110  ls
+  111  ls --help
+  112  date
+  113  date > logfile.txt
+  114  ls
+  115  date >> logfile.txt
+  116  cat "logfile.txt"
+  117  wc -w *.tsv
+  118  wc -w *.tsv | sort
+  119  ls | wc
+  120  ls | wc -l
+  121  pwd
+  122  grep -c 1999 *.tsv
+  123  grep -ci revolution *.tsv
+  124  mkdir results
+  125  grep -ci revolution *tsv > results/revolution-count.txt
+  126  ls
+  127  cat results/revolution-count.txt
+  128  grep -ci revolution *.tsv > results/$(date "=%Y-%m-%d")_revolution-count.tsv
+  129  grep -ci revolution *.tsv > results/$(date "+%Y-%m-%d")_revolution-count.tsv
+  130  ls
+  131  cd results
+  132  ls
+  133  cat JA-america.tsv
+  134  cd ..
+  135  cat JA-america.tsv
+  136  cat *america*.tsv
+  137  grep -c harvard *america*.tsv
+  138  grep =ci hero *a.tsv
+  139  grep -ci hero *a.tsv
+  140  grep -ci hero a*.tsv
+  141  grep -ci hero a?.tsv
+  142  grep -Po '\d{4}-\d{4}' 2014-01_JA.tsv
+  143  grep -Po '\d{4}-\d{4}' 2014-01_JA.tsv > results/issns.tsv
+  144  head results/issns.tsv
+  145  grep -Po '\d{4}-\d{4}' 2014-01_JA.tsv | sort | uniq | wc -l 
+  146  mv pg514.txt littlewomen.txt
+  147  ls
+  148  for name in "Jo" "Meg" "Beth" "Amy"; do echo "$name"; grep -wo "$name" littlewomen.txt | wc -l; done
+  149  head 2014-01_JA.tsv
+  150  cut -f 2,4,5,8 2014-01_JA.tsv | head
+  151  cut -f 2,4,5,8 2014-01_JA.tsv > results/citationcolumns.tsv
+  152  ls
+  153  head results/citationcolumns.tsv
+  154  git config --list
+  155  git config --global user.name "Janine Pino"
+  156  git config --global user.email "jpino@vols.utk.edu"
+  157  git config --list
+  158  cd ../..
+  159  pwd
+  160  mkdir hello-world
+  161  ls
+  162  cd hello-world/
+  163  ls
+  164  git init
+  165  ls
+  166  ls -a
+  167  git config --global init.defaultbranch "main"
+  168  git config --list
+  169  git config --global defaultbranch "main"
+  170  git status
+  171  touch index.md
+  172  git status
+  173  git add index.md
+  174  git status
+  175  git commit -m 'add index.md'
+  176  cd ../lcw2022
+  177  pwd
+  178  git config --global init.defaultbranch "main"
+  179  git init
+  180  ls -a
+  181  git status
+  182  git config --list
+  183  git add .
+  184  git status
+  185  git commit -m 'add day 1 files'
+  186  history > history.txt
